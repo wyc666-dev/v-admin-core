@@ -1,18 +1,19 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
+/**
+ * 应用入口文件。
+ *
+ * 企业级重构后的职责：
+ * 1. 启动全局副作用（如 Mock 拦截）。
+ * 2. 引入基础样式。
+ * 3. 将根组件 App 挂载到真实的 DOM 节点上。
+ */
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App";
+import "./mock";
+import "./index.css";
 
-// 1. 样式初始化
-// import "reset-css" 
-
-// 2. 全局样式
-import './index.css'
-
-// 3. 引入路由（重点：这里不再直接用 App）
-import { RouterProvider } from 'react-router-dom'
-import { router } from './router'
-
-ReactDOM.createRoot(document.getElementById('root')!).render(
+ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
-  </React.StrictMode>
-)
+    <App />
+  </React.StrictMode>,
+);

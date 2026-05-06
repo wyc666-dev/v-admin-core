@@ -1,0 +1,82 @@
+.home img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-right: 40px;
+}
+
+.home .name {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.home .user {
+  display: flex;
+  align-items: center;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+}
+
+.home .login-info p {
+  line-height: 28px;
+  font-size: 14px;
+  color: #999999;
+}
+
+.home .login-info p span {
+  color: #666666;
+  margin-left: 60px;
+}
+
+.home .num {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.home .num .ant-card {
+  width: 33%;
+}
+
+.home .num .ant-card-body {
+  display: flex;
+  padding: 10px 25px;
+}
+
+.home .num .icon-box {
+  width: 80px;
+  height: 80px;
+  text-align: center;
+  line-height: 85px;
+  color: #fff;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.home .anticon {
+  font-size: 30px;
+}
+
+.home .num .detail .num {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.home .num .detail .txt {
+  font-size: 14px;
+  text-align: center;
+  color: #999999;
+}
+.home .num .detail {
+  margin-left: 15px;
+}
+/* 确保 icon-box 下的所有 anticon span 标签内的 SVG 强制显示白色 */
+.home .num .icon-box .anticon {
+  color: #fff !important; /* 强制覆盖，确保可见性 */
+}
+
+.home .gragh {
+  display: flex;
+  margin-top: 20px;
+}

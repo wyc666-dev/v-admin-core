@@ -1,75 +1,95 @@
-# React + TypeScript + Vite
+# Vite Admin Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, high-performance administrative dashboard template built with **React 19**, **Vite**, and **Ant Design**. This project features a robust tech stack including Redux Toolkit, React Query, and Tailwind CSS, providing a solid foundation for enterprise-level applications.
 
-Currently, two official plugins are available:
+## 🚀 Key Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **React 19 & Vite 6/8**: Leveraging the latest React features and the fastest build tool.
+- **UI Framework**: Powered by **Ant Design** for high-quality components and a professional look.
+- **State Management**: Dual-store approach using **Redux Toolkit** (for global/layout state) and **Zustand** (for lightweight local state).
+- **Data Fetching**: **TanStack React Query** for efficient server state management, caching, and synchronization.
+- **Form Management**: **React Hook Form** integrated with **Zod** for type-safe schema validation.
+- **Routing**: **React Router 7** with a centralized route configuration and an automated **Route Guard** for authentication.
+- **Data Visualization**: Interactive charts and dashboards using **ECharts** (via `echarts-for-react`).
+- **Styling**: Modern styling with **Tailwind CSS** and **Sass**.
+- **Mock Service**: Integrated **MSW (Mock Service Worker)** and **Mock.js** for seamless development without a backend.
+- **Responsive Layout**: Sidebar navigation, dynamic Tag navigation (Tabs), and breadcrumbs.
 
-## React Compiler
+## 🛠 Tech Stack
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+| Category | Technology |
+| :--- | :--- |
+| **Framework** | [React 19](https://react.dev/) |
+| **Build Tool** | [Vite](https://vitejs.dev/) |
+| **UI Library** | [Ant Design](https://ant.design/) |
+| **State** | [Redux Toolkit](https://redux-toolkit.js.org/), [Zustand](https://docs.pmnd.rs/zustand) |
+| **Query** | [React Query v5](https://tanstack.com/query/latest) |
+| **Routing** | [React Router 7](https://reactrouter.com/) |
+| **Forms** | [React Hook Form](https://react-hook-form.com/), [Zod](https://zod.dev/) |
+| **Charts** | [ECharts](https://echarts.apache.org/) |
+| **Styles** | [Tailwind CSS](https://tailwindcss.com/), [Sass](https://sass-lang.com/) |
+| **Mocking** | [MSW](https://mswjs.io/), [Mock.js](http://mockjs.com/) |
 
-Note: This will impact Vite dev & build performances.
+## 📦 Getting Started
 
-## Expanding the ESLint configuration
+### Prerequisites
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- [Node.js](https://nodejs.org/) (v18+ recommended)
+- [pnpm](https://pnpm.io/) (recommended) or npm/yarn
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Installation
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+1. Clone the repository:
+   ```bash
+   git clone <repository-url>
+   cd vite-project
+   ```
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+2. Install dependencies:
+   ```bash
+   pnpm install
+   ```
+
+3. Start the development server:
+   ```bash
+   pnpm dev
+   ```
+
+### Default Login Credentials
+
+The project uses Mock data for authentication. You can log in using:
+- **Username:** `admin`
+- **Password:** Any string
+
+## 📂 Project Structure
+
+```text
+src/
+├── api/            # Axios instance and query client setup
+├── assets/         # Static assets like images and styles
+├── components/     # Reusable UI components (Echarts, Header, Sidebar, etc.)
+├── hooks/          # Custom React hooks
+├── layouts/        # Page layout wrappers
+├── mock/           # MSW and Mockjs definitions
+├── pages/          # Page components (Home, Login, User Management, etc.)
+├── routes/         # Centralized routing and Route Guards
+├── services/       # API service layers
+├── store/          # Redux and Zustand store definitions
+├── types/          # Global TypeScript interfaces
+└── utils/          # Helper functions
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 📜 Available Scripts
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- `pnpm dev`: Runs the app in development mode with HMR.
+- `pnpm build`: Compiles the application for production.
+- `pnpm lint`: Runs ESLint to check for code quality issues.
+- `pnpm preview`: Locally previews the production build.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## 📄 License
+
+This project is licensed under the MIT License.
