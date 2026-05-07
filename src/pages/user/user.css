@@ -1,8 +1,0 @@
-.user .flex-box {
-  display: flex;
-  width: 100%;
-  align-items: center;
-}
-.user .space-between {
-  justify-content: space-between;
-}
